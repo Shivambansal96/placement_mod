@@ -1,0 +1,142 @@
+
+
+#property {
+    // background-color: red;
+
+    border: solid 1px rgba(211, 211, 211, 0.564);
+
+    height: 450px;
+    width: 350px;
+
+    border-radius: 12px;
+
+    margin-bottom: 3%;
+
+        #top_image {
+            // background-color: cyan;
+
+            height: 60%;
+            width: 100%;
+
+
+                img {
+
+                    border-top-left-radius: 12px;
+                    border-top-right-radius: 12px;
+                    height: 100%;
+                    width: 100%;
+                    overflow: hidden;
+                }
+        }
+
+        #bottom_info {
+            // background-color: lightgray;
+
+            height: 40%;
+            width: 100%;
+
+                .up_info {
+                    // background-color: red;
+
+                    height: 75%;
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                        .top_rent, .mid_name, .bottom_address {
+                            height: 30%;
+                            width: 90%;
+
+                            // border: solid 2px cyan;
+
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+
+                            p {
+                                font-size: 24px;
+                            }
+                        }
+
+                        .top_rent {
+                            justify-content: space-between; 
+                            
+                            i {
+                                font-size: 32px;
+                            }
+
+                            i:hover {
+                                cursor: pointer;
+                                // color: orangered;
+                            }                           
+
+                            // i:active {
+                            //     color: red;
+                            // }
+
+                            // i:checked {
+                            //     color: cyan;
+                            // }
+
+                        
+
+                            p {
+                                font-weight: bold;
+                                color: darkblue;
+                            }
+                        }
+
+                        // .mid_name {}
+
+                        .bottom_address {
+                            height: 35%;
+
+                            border-bottom: solid .5px lightgray;
+
+                            p {
+
+                                font-size: 20px;
+                            }
+                        }
+
+                }
+
+                .down_info {
+                    // background-color: greenyellow;
+
+                    height: 25%;
+                    width: 100%;
+
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                     .beds, .baths, .room_size {
+                        width: 30%;
+                        // border: solid 2px red;
+
+                        display: flex;
+                        gap: 6%;
+                        justify-content: center;align-items: center;
+                        font-size: 16px;
+
+                            i {
+                                padding-top: 2%;
+                                font-size: 20px;
+                            }
+
+                     }
+
+
+
+
+                }
+
+
+        }
+
+
+}

@@ -1,0 +1,348 @@
+
+
+#nav {
+    // border: solid 2px red;
+    height: 200px;
+    // width: 100%;
+
+    display: flex;
+    flex: 1;
+    gap: 5%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+#top_nav {
+    // border: solid 2px red;
+    background-color: rgba(211, 211, 211, 0.5);
+
+    height: 50%;
+    width: 90%;
+
+    padding: 0 5%;
+
+    display: flex;
+    flex: 1;
+
+    justify-content: space-between;
+    align-items: center;
+
+        .left {
+            flex: 3;
+        }
+
+
+        .right {
+            // border: solid 2px rebeccapurple;
+            height: 75%;
+            width: 40%;
+
+            display: flex;
+            flex: 2;
+
+            
+            gap: 3%;    
+            justify-content: center;
+            align-items: center;             
+
+                #input_box {
+
+                    display: flex;
+                    flex: 2;
+                    justify-content: center;
+                    align-items: center;
+
+                    // border: solid 2px rebeccapurple;
+
+                    height: 60%;
+                    width: 50%;
+
+                        input {
+                            height: 90%;
+                            width: 100%;
+                            border-radius: 18px;
+                            outline: none;
+                            font-size: 17px;
+                            padding: 0 5%;
+                            border: none;
+
+                        }
+
+                }
+
+                #search_button, #liked_button_1{
+                    height: 60%;
+                    width: 18%;
+                    // border: solid 2px rebeccapurple;
+                    display: flex;
+                    flex: 1;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+
+                    button {
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 12px;
+                        outline: none;
+                        border: black 2px solid;
+                        font-size: 17px;                    
+                    }
+
+                }
+
+             
+
+                
+
+            button:hover {
+                background-color: black;
+                color: white;
+                cursor: pointer;
+                
+            }
+
+
+        }
+}
+
+#below_nav {
+    // border: solid 2px rebeccapurple;
+
+    height:  50%;
+    width: 85%;
+
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    // padding: 0 15%;
+    background-color: rgba(211, 211, 211, 0.508);
+
+        #filter_city, #filter_date, #filter_price, #filter_type, #submit_button  {
+            // border: solid 2px cyan;
+            height: 100%;
+            width: 20%;
+
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+
+            border-right: solid .5px rgba(0, 0, 0, 0.204);
+
+                p {
+                    // padding-left: 5%;
+                    font-size: 18px;
+                    // border: solid 2px red;
+
+                }
+                input, select {
+                    // border: solid 2px red;
+                    height: 50%;
+                    width: 80%;
+                    text-align: center;
+                    // margin-bottom: 5%;
+                    font-size: 15px;
+                    // -webkit-appearance: none;
+                    appearance: none;
+                    outline: none;
+
+                }
+
+                input:focus, select:focus {
+                    // background-color: red;
+                    outline: red;
+                    border: solid 3px rebeccapurple;
+                }
+
+                select {
+                    option {
+                        border: solid 2px red;
+                        font-size: 15px;
+                        text-align: center;
+                        padding: 2%;
+                    }
+                }
+
+        }
+
+        // #filter_date {}
+        // #filter_price {}
+        // #filter_type {}
+
+        #submit_button {
+          
+            width: 10%;
+            align-items: center;
+            border: none;
+
+            button {
+                height: 40%;
+                width: 70%;
+                border-radius: 12px;
+                outline: none;
+                // border: black 2px solid;
+                border: none    ;
+                font-size: 15px;
+                background-color: rgb(54, 115, 221);
+                color: white;
+            }
+
+            button:hover {
+                background-color: black;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+
+
+}
+
+#liked_button_mob {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    #top_nav .right button {
+        
+            
+        font-size: 15px;
+
+        // border: red solid 2px;
+
+    }
+
+
+    #below_nav {
+        flex: 1;
+
+        #filter_city, #filter_date, #filter_price, #filter_type, #submit_button  {
+
+
+        p {
+            font-size: 16px;
+
+        }
+
+        select, input {
+            // width: 70%;
+            height: 30%;
+        }
+
+    }
+
+
+    #filter_city {
+        // padding-left: 2%;
+        margin-left: 2%;
+    }
+        #filter_date {
+            input {
+                width: 90%;
+            }
+        }
+
+    }
+
+
+}
+
+@media screen and (max-width: 425px) {
+
+#nav {
+    height: auto;
+}
+
+    #top_nav {
+
+        height: fit-content;
+
+        h1 {
+            font-size: 20px;
+        }   
+
+
+        .right {
+            display: none;
+        }
+
+        #liked_button_mob {
+            display: block;
+            border: solid 2px red;
+
+            height: 50%;
+            width: 22.5%;
+
+
+            button {
+                
+                cursor: pointer;
+                height: 100%;
+                width: 100%;            
+                border-radius: 12px;
+                outline: none;
+                border: black 2px solid;
+                font-size: 15px; 
+            }
+
+            button:hover {
+                background-color: black;
+                color: white;
+            }
+        }
+
+    }
+
+
+    #below_nav {
+
+        margin-top: 5%;
+        flex-direction: column;
+        height: fit-content;
+        
+        #filter_city, #filter_date, #filter_price, #filter_type, #submit_button  {
+
+            
+            // border: none;
+            // border: solid 2px red;
+
+            // height: 100%;
+            width: 100%;
+
+            justify-content: center;
+            align-items: center;
+
+            select {
+                option {
+                // text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5%;
+
+                }
+            }
+            
+        }
+
+        #submit_button {
+            // height: 150%;
+            min-height: 60px;
+            width: 40%;
+            // max-height: 100px;
+
+            button {
+                min-height: 30px;
+            }
+        }
+        
+    }
+}
+    
