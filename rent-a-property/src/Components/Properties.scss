@@ -12,6 +12,8 @@
 
     margin-bottom: 3%;
 
+    box-shadow: 10px 10px 5px lightblue;
+
         #top_image {
             // background-color: cyan;
 
@@ -27,6 +29,9 @@
                     width: 100%;
                     overflow: hidden;
                 }
+
+
+                
         }
 
         #bottom_info {
@@ -137,6 +142,14 @@
 
 
         }
+
+
+}
+
+#property:hover {
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 
 
 }

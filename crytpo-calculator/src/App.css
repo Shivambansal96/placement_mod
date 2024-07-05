@@ -1,0 +1,384 @@
+
+#App {
+
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  /* flex: 1; */
+  padding-left: 10%;
+  justify-content: start;
+  align-items: center;
+
+  /* background-color: gray; */
+  /* background-image: url('https://images.hdqwalls.com/download/bitcoin-cryptocurrency-digital-currency-5k-cj-1920x1080.jpg'); */
+  /* background-image: url('https://wallpaperaccess.com/full/210978.jpg'); */
+  background-image: url('https://payspacemagazine.com/wp-content/uploads/2024/03/the-path-to-profit-unlocking-the-potential-of-btc-mining-operations.jpg');
+
+  background-size: cover;
+  background-position: center;
+  /* background-clip: border-box; */
+
+}
+
+#content {
+  /* border: solid 2px red; */
+
+  /* background-image: url('https://wallpaperaccess.com/full/210978.jpg'); */
+  /* background-size: cover;
+  background-position: center; */
+
+
+  background-color: #1d9cf066;
+  border-radius: 42px;
+  /* font-size: 20px; */
+  font-weight: 500;
+  height: 80vh;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2%;
+  /* flex: 1; */
+
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+
+#top {
+  /* border: solid 2px red; */
+ 
+  height: 20%;
+  width: 100%;
+
+  border-bottom: solid 1px lightgray;
+}
+
+#bottom {
+  height: 80%;
+  width: 100%;
+  /* border: solid 2px red; */
+
+
+}
+
+
+#heading, #heading_bottom {
+  height: 50%;
+  /* width: 100%; */
+
+  display: flex;
+  /* flex: 1; */
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+#heading_bottom {
+  /* justify-content: space-between; */
+  /* border: solid 2px red; */
+  gap: 5%;
+}
+
+#Financial_Year, #Country {
+
+  /* border: solid 2px yellow; */
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+
+}
+
+#Financial_Year select , #Country select{
+  font-size: 16px;
+  font-weight: 500;
+
+  width: 50%;
+  /* font-style: italic; */
+}
+
+#bottom {
+  display: flex;
+  /* flex: 1; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2%;
+
+}
+
+
+#bottom_one, #bottom_two, #bottom_three, #bottom_four, #bottom_five {
+  display: flex;
+  flex: 1;
+  /* height: 20%; */
+  width: 100%;
+  /* border: solid 2px cyan; */
+}
+
+#bottom_two {
+  /* height: 50% */
+  min-height: 28%;
+}
+
+#bottom_five {
+  gap: 12%;
+}
+
+#purchase_price, #expenses, #annual_income, #capital_gains, #cg_tax {
+  /* border: solid 2px red; */
+  flex: 1;
+  width: 100%;
+
+  display: flex;
+  gap: 5%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+#sale_price, #investment_type,  #tax_rate, #discount, #tax_to_pay {
+  /* border: solid 2px red; */
+  /* width: 100%; */
+  
+  display: flex;
+  flex: 1;
+  gap: 5%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+#purchase_price input, #expenses input, #annual_income select, #capital_gains p:nth-child(2) {
+  /* flex: 1; */
+  height: 50%;
+  width: 90%;
+  background-color: rgba(211, 211, 211, 0.358);
+  outline: none;
+  border: solid 1px black;
+
+  border-radius: 8px;
+
+  font-size: 18px;
+  padding-left: 2%;
+
+  
+}
+
+#discount p:nth-child(2), #capital_gains p:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+#sale_price input, #discount p:nth-child(2) {
+  height: 50%;
+  width: 90%;
+  background-color: rgba(211, 211, 211, 0.358);
+  outline: none;
+  border: solid 1px black;
+
+  border-radius: 8px;
+  font-size: 18px;
+  padding-left: 2%;
+
+}
+
+#investment_type {
+  /* border: solid 2px red; */
+  display: flex;
+  align-items: start;
+
+}
+
+/* #term_container {
+display: flex;  
+justify-content: center;
+align-items: center;
+  width: 100%;
+  border: solid 2px red;
+  flex: 1;
+
+} */
+
+#term_container {
+  /* border: solid 2px red; */
+ display: flex;
+ /* flex-direction: column; */
+ /* flex: 1; */
+ width: 100%;
+ height: 50%;
+ justify-content: center;
+ align-items: center;
+ gap: 5%;
+}
+
+#short_term, #long_term {
+  border: solid 2px black;
+  /* background-color: red; */
+  padding: 6px 12px;
+  border-radius: 8px;
+
+  display: flex;
+  gap: 10px;
+}
+
+#term_container label {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 3px;
+}
+
+#investment_type button {
+  background-color: white;
+  border: solid 1px black;
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 70%;
+  border-radius: 12px;
+  outline: none;
+  /* border: none; */
+}
+
+#investment_type button img {
+  /* height: 40px;
+  width: 30px; */
+
+  height: 20px;
+  width: 20px;
+
+  /* display: none; */
+}
+
+
+#cg_tax {
+  align-items: center;
+  gap: 10%;
+  background-color: #EBF9F4;
+  font-size: 16px;  
+
+}
+#cg_tax h3, #tax_to_pay h3 {
+  font-weight: bolder;
+  font-size: 24px;
+
+}
+
+#tax_to_pay {
+  align-items: center;
+  gap: 10%;
+  background-color: #EBF2FF;
+  font-size: 16px;
+}
+
+
+@media screen and (max-width: 1120px) {
+  #content {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #content {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #content {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #App {
+    /* overflow: scroll; */
+    height: 180vh;
+
+    padding-left: 0;
+    justify-content: center;
+
+
+  }
+
+  #content {
+    width: 60%;
+    /* height: 80%; */
+    height: max-content;
+    padding: 0 2%;
+    /* gap: 5%; */
+
+
+  }
+
+  h1 {
+    font-size: 25px;
+    padding: 5% 0;
+    text-align: center;
+    /* border: solid 2px red; */
+  }
+
+
+
+  #heading, #heading_bottom {
+    flex-direction: column;
+  }
+
+  #Financial_Year, #Country {
+    width: 120%;
+    align-items: center;
+    padding: 2%;
+  }
+
+  #bottom_one, #bottom_two, #bottom_three, #bottom_four, #bottom_five {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3% 0;
+  }
+
+  #purchase_price, #expenses, #annual_income, #capital_gains, #cg_tax {
+    width: 100%;
+    font-size: 18px;
+    align-items: start;
+    padding: 5% 0;
+    display: flex;
+    gap: 20000%;
+
+  }
+
+  #sale_price, #investment_type, #tax_rate, #discount, #tax_to_pay {
+    width: 100%;
+    align-items: start;
+    font-size: 18px;
+
+  }
+
+  input, select, #discount p:nth-child(2), #capital_gains p:nth-child(2){
+    /* font-size: 15px; */
+    /* width; */
+    padding: 3%;
+  }
+
+   #cg_tax, #tax_to_pay {
+    /* padding-top: 5%; */
+    margin-top: 5%;
+
+    /* height: 50%; */
+    min-height: 80px;
+
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+}
+
