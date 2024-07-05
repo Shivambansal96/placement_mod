@@ -69,7 +69,6 @@ Contributions are welcome! Please fork the repository and create a pull request 
 Feel free to adjust any details or sections according to your preferences or additional project information! -->
 
 
-```markdown
 # Crypto Tax Calculator
 
 A simple web application to calculate capital gains tax on cryptocurrency transactions based on user inputs for different countries.
@@ -181,6 +180,3 @@ Contributions are welcome! Please fork the repository and create a pull request 
 - Shivam Bansal
   - GitHub: [Shivambansal96](https://github.com/Shivambansal96)
   - Email: bansal.shivam1216@gmail.com
-```
-
-Feel free to replace the placeholders for image links and the hosted link with the actual URLs relevant to your project. This structured README should help users and collaborators understand your project comprehensively.
