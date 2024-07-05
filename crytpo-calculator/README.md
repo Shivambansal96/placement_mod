@@ -68,7 +68,6 @@ Contributions are welcome! Please fork the repository and create a pull request 
 
 Feel free to adjust any details or sections according to your preferences or additional project information! -->
 
-Here's an enhanced version of your README that includes additional details as requested:
 
 ```markdown
 # Crypto Tax Calculator
