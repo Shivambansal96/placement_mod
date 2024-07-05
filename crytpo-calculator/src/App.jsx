@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './App.css'
 import country_icon from './assets/australia.png'
-// import tick from './assets/double_tick.gif'
 import tick from './assets/tick.png'
 import '../style.scss'
 
@@ -106,8 +105,6 @@ const CalculateTaxForAustralia = () => {
 
   console.log(`discountA`, discount);
 
-  // CalculateTaxOfAustralia();
-
   switch(annualIncome) {
 
     case '1': 
@@ -169,34 +166,6 @@ useEffect(() => {
 
 
 }, [country, annualIncome, investmentType])
-
-
-
-  // console.log(`investmentType`, investmentType);
-
-  // setPurchasePrice(`$ ${purchasePrice}`)
-
-  // purchasePrice.split()
-
-  
-
-// useEffect(()=> {
-
-//   setCapitalGains(purchasePrice - (salePrice + expenses)) //CG Done
-  
-//   setDiscount(0.5 * Number(capitalGains))
-
-//   setCGAmount(0.5 * capitalGains)
-
-//   CalculateTaxOfAustralia()
-    
-
-
-// }, [annualIncome, investmentType])
-
-
-
-
 
   return (
     <div id='App'>
