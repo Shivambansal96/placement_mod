@@ -10,7 +10,8 @@ const Navbar = (props) => {
         price, setPrice,
         date, setDate, 
         houseType, setHouseType,
-        submitHandler, favHandler} = useContext(storeContext)
+        submitHandler, favHandler,
+        search, setSearch, searchHandler} = useContext(storeContext)
 
 
 
@@ -27,11 +28,11 @@ const Navbar = (props) => {
             <div className="right">
 
                 <div id="input_box">
-                    <input type="text" name="" id="input_field" />
+                    <input type="text" name="" id="input_field" value={search} onChange={(e) => setSearch(e.target.value)}  />
                 </div>
 
                 <div id="search_button">
-                    <button>Search</button>
+                    <button onClick={searchHandler} >Search</button>
                 </div>
 
                 <div id="liked_button_1" onClick={favHandler}>

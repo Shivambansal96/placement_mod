@@ -9,18 +9,39 @@ const StoreContextProvider = (props) => {
     const [price, setPrice] = useState();
     const [date, setDate] = useState('');
     const [houseType, setHouseType] = useState('');
-
+    
+    const [search, setSearch] = useState('');
 
     // console.log(houseData);
+
+    const searchHandler = () => {
+
+        // const filteredProperties = houseData.filter(property => 
+        //     property.name_of_property.toLowerCase().includes(search.toLowerCase())
+        //   );
+
+          const filteredData = houseData.filter((item) => {
+
+            const FName = item.name_of_property.toLowerCase().includes(search.toLowerCase());
+            const FAddress = item.address.toLowerCase().includes(search.toLowerCase());
+
+            return (
+                FName || FAddress
+            )
+          })
+
+          setHouseData(filteredData)
+        
+    }
     
     const submitHandler = () => {
         
         
-    console.log(`price`, price);
+    // console.log(`price`, price);
         
     let filteredData = data;
 
-    console.log('start', filteredData);
+    // console.log('start', filteredData);
 
 
     
@@ -80,7 +101,7 @@ const StoreContextProvider = (props) => {
 
 
 
-console.log(`date`, date);
+// console.log(`date`, date);
 
     if(date) {
         filteredData = filteredData.filter((item) => {
@@ -177,24 +198,20 @@ console.log(`date`, date);
             )
         })
 
-        console.log('b',filteredData);
+        // console.log('b',filteredData);
 
         setHouseData(filteredData)
 
-        console.log('a',filteredData);
+        // console.log('a',filteredData);
 
-        console.log(`houseData`, houseData);
+        // console.log(`houseData`, houseData);
 
     }
 
 
-
-
-    
-
     const contextValues = {
 
-        data,
+    data,
     houseData, setHouseData,
     price, setPrice,
     date, setDate, 
@@ -202,6 +219,7 @@ console.log(`date`, date);
     submitHandler,
     likeHandler,
     favHandler,
+    search, setSearch, searchHandler
 
     }
 
