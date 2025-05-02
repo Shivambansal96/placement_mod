@@ -6,12 +6,11 @@ import { FaBath } from "react-icons/fa";
 import { GoDiamond } from "react-icons/go";
 import { storeContext } from '../Context API/storeContext';
 
-
 const Properties = (props) => {
   
-    const {likeHandler, houseData, favHandler} = useContext(storeContext);
+    const {likeHandler, houseData} = useContext(storeContext);
 
-        let checkLike =  houseData[props.id].liked;
+    let checkLike =  houseData[props.id].liked;
 
   return (
 
@@ -19,7 +18,6 @@ const Properties = (props) => {
 
             <div id="top_image">
                 <img src={props.image_src} alt="image_of_properties" />
-                {/* <p>image</p> */}
             </div>
 
             <div id="bottom_info">
@@ -78,12 +76,7 @@ const Properties = (props) => {
 
         </div>
 
-
-
-
-      
-  )
-}
+)}
 
 export default Properties
 

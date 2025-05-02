@@ -12,8 +12,6 @@ const StoreContextProvider = (props) => {
     
     const [search, setSearch] = useState('');
 
-    // console.log(houseData);
-
     const searchHandler = () => {
 
         // const filteredProperties = houseData.filter(property => 
@@ -43,8 +41,6 @@ const StoreContextProvider = (props) => {
 
     // console.log('start', filteredData);
 
-
-    
     switch(price) {
 
         case "0" :
@@ -54,7 +50,6 @@ const StoreContextProvider = (props) => {
         case "1" : 
             filteredData = filteredData.filter((item) => {
                 return (
-
                     item.amount_per_day >= 0 && item.amount_per_day <= 500
                 )
             })
@@ -108,69 +103,73 @@ const StoreContextProvider = (props) => {
             return (
                 new Date(item.available_from) <= new Date(date)
             )
-        } 
+        }
         )
     }
 
     // console.log('after-date', filteredData);
 
 
-    switch(houseType) {
+    // switch(houseType) {
 
-        case "All" :
-            filteredData;
-            break;
+    //     case "All" :
+    //         filteredData;
+    //         break;
 
-        case "villa" :
-            filteredData = filteredData.filter((item) => {
-                return (
-                    item.type === 'villa'
-                )
-            }) 
-            break;
+    //     case "villa" :
+    //         filteredData = filteredData.filter((item) => {
+    //             return (
+    //                 item.type === 'villa'
+    //             )
+    //         }) 
+    //         break;
 
-        case "mansion" :
-            filteredData = filteredData.filter((item) => {
-                return (
-                    item.type === 'mansion'
-                )
-            }) 
-            break;
+    //     case "mansion" :
+    //         filteredData = filteredData.filter((item) => {
+    //             return (
+    //                 item.type === 'mansion'
+    //             )
+    //         }) 
+    //         break;
 
-        case "cottage" :
-            filteredData = filteredData.filter((item) => {
-                return (
-                    item.type === 'cottage'
-                )
-            }) 
-            break;
+    //     case "cottage" :
+    //         filteredData = filteredData.filter((item) => {
+    //             return (
+    //                 item.type === 'cottage'
+    //             )
+    //         }) 
+    //         break;
 
-        case "House" :
-            filteredData = filteredData.filter((item) => {
-                return (
-                    item.type === 'House'
-                )
-            }) 
-            break;
+    //     case "House" :
+    //         filteredData = filteredData.filter((item) => {
+    //             return (
+    //                 item.type === 'House'
+    //             )
+    //         }) 
+    //         break;
 
-        case "lodge" :
-            filteredData = filteredData.filter((item) => {
-                return (
-                    item.type === 'lodge'
-                )
-            }) 
-            break;
+    //     case "lodge" :
+    //         filteredData = filteredData.filter((item) => {
+    //             return (
+    //                 item.type === 'lodge'
+    //             )
+    //         }) 
+    //         break;
 
-        default :
-            filteredData;
-            break;
+    //     default :
+    //         filteredData;
+    //         break;
                                     
 
+    // }
+
+      if (houseType && houseType !== "All") {
+        filteredData = filteredData.filter(item => item.type.toLowerCase() === houseType.toLowerCase());
     }
 
     setHouseData(filteredData);
 
-    console.log('final filtered Data', houseData);
+    // console.log('final filtered Data', houseData);
 
 
     }
@@ -182,6 +181,7 @@ const StoreContextProvider = (props) => {
         if (idx === index) {
             return { ...item, liked: !item.liked };
         }
+        
         return item;
     });
 
@@ -193,18 +193,16 @@ const StoreContextProvider = (props) => {
     const favHandler = () => {
 
         let filteredData = houseData.filter((item) => {
+
             return (
                 item.liked == true
             )
         })
+        console.log(filteredData);
+        
 
-        // console.log('b',filteredData);
+        setHouseData(filteredData);
 
-        setHouseData(filteredData)
-
-        // console.log('a',filteredData);
-
-        // console.log(`houseData`, houseData);
 
     }
 
@@ -214,17 +212,16 @@ const StoreContextProvider = (props) => {
     data,
     houseData, setHouseData,
     price, setPrice,
-    date, setDate, 
+    date, setDate,
     houseType, setHouseType,
     submitHandler,
     likeHandler,
     favHandler,
     search, setSearch, searchHandler
 
-    }
+}
 
-
-  return (
+return (
 
     <storeContext.Provider value={contextValues}>
 
@@ -235,3 +232,7 @@ const StoreContextProvider = (props) => {
 }
 
 export default StoreContextProvider
+
+
+// START NEW HERE ============================================================================
+

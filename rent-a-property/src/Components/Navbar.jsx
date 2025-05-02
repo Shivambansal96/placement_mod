@@ -1,34 +1,34 @@
 import React, { useContext } from 'react'
 import './Navbar.scss'
 // import { Link } from 'react-router-dom'
-import { data } from '../../propertyData'
+// import { data } from '../../propertyData'
 import { storeContext } from '../Context API/storeContext'
+import homepage_icon from '../assets/homepage_icon.gif'
 
 const Navbar = (props) => {
 
-    const { houseData, setHouseData,
-        price, setPrice,
-        date, setDate, 
+    const { price, setPrice,
+        date, setDate,
         houseType, setHouseType,
         submitHandler, favHandler,
-        search, setSearch, searchHandler} = useContext(storeContext)
-
-
-
+        search, setSearch, searchHandler } = useContext(storeContext)
 
   return (
     <div id='nav' className=' border-2 border-red-500'>
 
         <div id="top_nav">
             <div className="left">
-                {/* <h1>Search properties to Rent</h1> */}
-                <h1>{props.heading}</h1>
+                <h1 id='icon_text' onClick={() => {window.location.reload()}}>
+                    {/* Search properties to Rent */}
+                    <img id='icon_icon' src={homepage_icon} alt="" />
+                    </h1>
+                {/* <h1>{props.heading}</h1> */}
             </div>
 
             <div className="right">
 
                 <div id="input_box">
-                    <input type="text" name="" id="input_field" value={search} onChange={(e) => setSearch(e.target.value)}  />
+                    <input type="text" name="" placeholder='Search for Properties' id="input_field" value={search} onChange={(e) => setSearch(e.target.value)}  />
                 </div>
 
                 <div id="search_button">
